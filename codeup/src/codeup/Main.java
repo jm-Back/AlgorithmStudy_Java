@@ -7,10 +7,16 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		char a = sc.next().charAt(0);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		System.out.println(++a);
-		System.out.println();
+		System.out.println(a+b);
+		System.out.println(a-b);
+		System.out.println(a*b);
+		System.out.println(a/b);
+		System.out.println(a%b);
+		System.out.printf("%.2f", (float)a/b);
+		
 		
 		
 		sc.close();
