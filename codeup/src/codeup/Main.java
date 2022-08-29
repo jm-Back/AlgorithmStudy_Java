@@ -10,7 +10,7 @@ public class Main {
 		char a = sc.next().charAt(0);
 		
 		System.out.println(++a);
-		
+		System.out.println();
 		
 		
 		sc.close();
