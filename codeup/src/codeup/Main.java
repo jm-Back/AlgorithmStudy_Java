@@ -10,14 +10,12 @@ public class Main {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
-		System.out.println(a+b);
-		System.out.println(a-b);
-		System.out.println(a*b);
-		System.out.println(a/b);
-		System.out.println(a%b);
-		System.out.printf("%.2f", (float)a/b);
 		
+		for(int i=1; i<=b; i++) {
+			a *= 2;
+		}
 		
+		System.out.println(a);
 		
 		sc.close();
 
