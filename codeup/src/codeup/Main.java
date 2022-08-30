@@ -5,20 +5,24 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		// 두 정수 입력받아 비교하기 1 
 		
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		
-		
-		for(int i=1; i<=b; i++) {
-			a *= 2;
+				Scanner sc = new Scanner(System.in);
+				
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				
+				if(a != b) {
+					System.out.println(0);
+				}else {
+					System.out.println(1);
+				}
+					
+				
+				
+				
+				sc.close();
+
+			}
+
 		}
-		
-		System.out.println(a);
-		
-		sc.close();
-
-	}
-
-}
