@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// 정수 3개를 입력받아 가장 작은 수 출력하기
+		// 정수 3개 입력 받아 짝수만 출력하기
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -13,8 +13,17 @@ public class Main {
 		int b = sc.nextInt();
 		int c = sc.nextInt();
 		
-		System.out.printf("%d", (a>b ? b:a)>c ? c : (a>b ? b:a) );
+		if(a%2==0) {
+			System.out.println(a);
+		} 
 		
+		if (b%2==0) {
+			System.out.println(b);
+		} 
+		
+		if (c%2==0){
+			System.out.println(c);
+		}
 		
 		
 		sc.close();
