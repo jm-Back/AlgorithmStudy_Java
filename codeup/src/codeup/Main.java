@@ -5,26 +5,19 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		// 평가 입력받아 다르게 출력하기
+		
 		Scanner sc = new Scanner(System.in);
 		
-		double a = sc.nextDouble();
+		String a = sc.next();
 		
-		if(a==Math.abs(a)) {
-			if(a%2==0) {
-				System.out.println("plus");
-				System.out.println("even");
-			} else {
-				System.out.println("plus");
-				System.out.println("odd");
-			}
-		} else {
-			if(a%2==0) {
-				System.out.println("minus");
-				System.out.println("even");
-			} else {
-				System.out.println("minus");
-				System.out.println("odd");
-			}
+		switch (a) {
+		case "A": System.out.println("best!!!"); break;
+		case "B": System.out.println("good!!"); break;
+		case "C": System.out.println("run!"); break;
+		case "D": System.out.println("slowly~"); break;
+		default: System.out.println("what?");
+			break;
 		}
 		
 		
