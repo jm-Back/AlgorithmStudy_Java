@@ -5,19 +5,30 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// 평가 입력받아 다르게 출력하기
+		// 월 입력 받아 계절 출력하기
 		
 		Scanner sc = new Scanner(System.in);
 		
-		String a = sc.next();
+		String n = sc.next();
 		
-		switch (a) {
-		case "A": System.out.println("best!!!"); break;
-		case "B": System.out.println("good!!"); break;
-		case "C": System.out.println("run!"); break;
-		case "D": System.out.println("slowly~"); break;
-		default: System.out.println("what?");
-			break;
+		switch (n) {
+		case "12":
+		case "1":
+		case "2":
+			System.out.println("winter"); break;
+		case "3":
+		case "4":
+		case "5":
+			System.out.println("spring"); break;
+		case "6":
+		case "7":
+		case "8":
+			System.out.println("summer"); break;
+		case "9":
+		case "10":
+		case "11":
+			System.out.println("fall"); break;
+		
 		}
 		
 		
