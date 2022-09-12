@@ -5,23 +5,31 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// 정수 1개 입력받아 그 수까지 출력하기
+		// 언제까지 더해야 할까?
 		
 		Scanner sc = new Scanner(System.in);
 		
+		//순서대로 더하다가, 입력된 정수와 같거나 커졌을 때 마지막에 더한 정수 출력
+		
+		int i = 0;
 		int n = sc.nextInt();
-		int zero = 0;
+		int sum = 0;
+		
+		for(i=1; sum<n; i++) {
+			sum += i;
 			
-		while(zero!=n+1) {
-			System.out.println(zero);
-			++zero;
+			if(sum<n) {
+				continue;
+			} else {
+				break;
+			}
 		}
 		
+		System.out.println(i);
 		
-		
+	
 		sc.close();
 
 	}
 
 }
-
