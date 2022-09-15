@@ -5,29 +5,18 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// 언제까지 더해야 할까?
+		// 16진수 구구단?
 		
 		Scanner sc = new Scanner(System.in);
 		
-		//순서대로 더하다가, 입력된 정수와 같거나 커졌을 때 마지막에 더한 정수 출력
+		String n = sc.next();
+		int m = Integer.valueOf(n, 16);
 		
-		int i = 0;
-		int n = sc.nextInt();
-		int sum = 0;
-		
-		for(i=1; sum<n; i++) {
-			sum += i;
-			
-			if(sum<n) {
-				continue;
-			} else {
-				break;
-			}
+		for(int i=1; i<16; i++) {
+			System.out.format("%X*%X=%X", m, i, m*i);
+			System.out.println();
 		}
 		
-		System.out.println(i);
-		
-	
 		sc.close();
 
 	}
