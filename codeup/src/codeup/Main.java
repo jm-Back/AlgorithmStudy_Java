@@ -1,23 +1,34 @@
 package codeup;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// 16진수 구구단?
+	public static void main(String[] args) throws IOException {
+		// 빛 섞어 색 만들기
 		
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String n = sc.next();
-		int m = Integer.valueOf(n, 16);
+		String[] a = br.readLine().split(" ");
 		
-		for(int i=1; i<16; i++) {
-			System.out.format("%X*%X=%X", m, i, m*i);
-			System.out.println();
+		int count = 0;
+
+		for(int i=0; i<Integer.valueOf(a[0]); i++) {
+			for(int j=0; j<Integer.valueOf(a[1]); j++) {
+				for(int z=0; z<Integer.valueOf(a[2]); z++) {
+					bw.write(i + " " + j + " " + z + "\n");
+					count++;
+				}
+			}
 		}
 		
-		sc.close();
+		bw.write(String.valueOf(count));
+		bw.flush();
 
 	}
 
