@@ -1,35 +1,30 @@
 package codeup;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
-		// 빛 섞어 색 만들기
+	public static void main(String[] args) {
+		// 여기까지! 이제 그만~
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		Scanner sc = new Scanner(System.in);
 		
-		String[] a = br.readLine().split(" ");
+		// 정수 1개를 입력받고, 1~5 계속 더하다가 입력된 정수보다 커지거나 같아지는 경우, 그때 합 출력
 		
-		int count = 0;
-
-		for(int i=0; i<Integer.valueOf(a[0]); i++) {
-			for(int j=0; j<Integer.valueOf(a[1]); j++) {
-				for(int z=0; z<Integer.valueOf(a[2]); z++) {
-					bw.write(i + " " + j + " " + z + "\n");
-					count++;
-				}
+		int n = sc.nextInt();
+		int sum = 0;
+		
+		for(int i=1; i<=n; i++) {
+			if(sum>=n) {
+				break;
 			}
+			sum += i;
 		}
 		
-		bw.write(String.valueOf(count));
-		bw.flush();
-
+		System.out.println(sum);
+		
+		sc.close();
+	
 	}
 
 }
